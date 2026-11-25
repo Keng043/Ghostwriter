@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ghostwriter-agent"
+version = "0.1.0"
+description = "A privacy-first, portable personal writing-style agent and skill."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "Ghostwriter contributors" }]
+keywords = ["writing", "agent", "skill", "style-profile", "local-first"]
+classifiers = ["Programming Language :: Python :: 3", "Operating System :: OS Independent"]
+dependencies = []
+
+[project.scripts]
+ghostwriter = "ghostwriter.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

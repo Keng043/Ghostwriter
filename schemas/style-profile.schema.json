@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Ghostwriter Style Profile",
+  "type": "object",
+  "required": ["user_id", "style_dna", "preferences"],
+  "properties": {
+    "user_id": {"type": "string", "minLength": 1},
+    "display_name": {"type": "string"},
+    "language": {"type": "string"},
+    "version": {"type": "string"},
+    "updated_at": {"type": "string", "format": "date-time"},
+    "retain_samples": {"type": "boolean", "default": false},
+    "samples": {"type": "array", "items": {"type": "string"}},
+    "style_dna": {
+      "type": "object",
+      "properties": {
+        "tone": {}, "sentence_architecture": {}, "lexical_choice": {},
+        "punctuation_spacing": {}, "formatting": {}, "opening": {},
+        "bad_news_framing": {}, "negative_constraints": {}
+      },
+      "additionalProperties": false
+    },
+    "preferences": {"type": "object"}
+  },
+  "additionalProperties": false
+}
